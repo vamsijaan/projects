@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine_clinic/Admission form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }   
+        .container{
+            width: 60vw;
+           
+        }
+        .h1{
+            color: red;
+            width: 100%;
+        background-color: aqua;    
+        }
+        table{
+            width: 60vw;
+            text-align: left;
+            height: 120vh;
+            /* background-color: rgb(117, 173, 222); */
+        }
+        tr{
+            height: 25px;
+           
+        }
+        th{
+            color: red;
+            background-color: rgba(203, 202, 202, 0.625);
+            border-radius: 3px;
+            padding: 3px;
+        }
+        td{
+            color: blue;
+            background-color: rgba(203, 202, 202, 0.625); 
+            border-radius: 3px;
+            padding: 0 3px;
+        }
+        .col-1{
+            width: 25%;
+        }
+        .col-2{
+            width: 45%;
+        }
+        .input-styles{
+            outline: none;
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        #address{
+            height: 90px;
+        }
+        #confirm{
+            color: #ffff;
+            background-color: red;
+            border: none;
+            border-radius: 3px;
+            width: 100px;
+            height: 29px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body><right>
+    <center>
+
+   
+    <div class="container">
+       <center> <div class="h1">Shine Clinic</div></center>
+
+        <table border="1" cellspacing="5px" >
+            <!-- row-1 -->
+            <tr>
+                <td class="col-1"><a href="#admission-info">Admission-info</a></td>
+                <td class="col-2"><a href="#personal-info">Personal-info</a></td>
+                <td ><a href="#payment-information">Payment-info</a></td>
+            </tr>
+
+            <!-- row-2 -->
+            <tr >
+                <th colspan="3" id="admission-info">Admission Information</th>
+            </tr>
+            <!-- row-3 -->
+            <!-- admission date&type&for -->
+            <tr>
+                <td>
+                    Date of Admission:
+                    <br> <input class="input-styles" type="date">
+                </td>
+
+                <td>
+                    Select the admission type
+                    <br>
+                    <select class="input-styles" name="admission-type" id="admission-type">
+                        <option value="type-1" selected>select..</option>
+                        <option value="type-2">option-1</option>
+                        <option value="type-2">option-1</option>
+                        <option value="type-2">option-1</option>
+                    </select>
+                </td>
+
+                <td>
+                    Admission For
+                    <br>
+                    <select class="input-styles" name="admission-for" id="admission-for">
+                        <option value="type-1" selected>select..</option>
+                        <option value="type-2">option-1</option>
+                        <option value="type-2">option-1</option>
+                        <option value="type-2">option-1</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- row-4 -->
+            <tr >
+                <td colspan="3">**Select if you have any of the following below</td>
+            </tr>
+
+            <!-- row-5 -->
+            <tr>
+                <td>
+                    <input  type="checkbox" id="cold">
+                    <label for="cold">Cold</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="fever">
+                    <label for="fever">Fever</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="cough">
+                    <label for="cough">Cough</label>
+                </td>
+            </tr>
+
+            <!-- row-6 -->
+            <tr>
+                <td>
+                    <input type="checkbox" id="Diapedesis">
+                    <label for="Diapedesis">Diapedesis</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="Blood_pressure">
+                    <label for="Blood_pressure">Blood Pressure</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="Heavy_surgery">
+                    <label for="Heavy_surgery">Heavy Surgery</label>
+                </td>
+            </tr>
+
+            <!-- row-7 -->
+            <!-- personal information -->
+            <tr >
+                <th colspan="3" id="personal-info">Personal Information</th>
+            </tr>
+            <!-- row-8 -->
+            <tr>
+                <td>Patient Name</td>
+                <td colspan="2"><input class="input-styles"id="name" type="text" placeholder="Enter the patient name"></td>
+            </tr>
+
+            <tr>
+                <td>Phone Number</td>
+                <td colspan="2"><input class="input-styles" id="phone-number" type="number" placeholder="Enter the phone number"></td>
+            </tr>
+            <tr>
+                <td>Email ID</td>
+                <td colspan="2"><input class="input-styles" id="email" type="email" placeholder="Enter the email id"></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td colspan="2"><input class="input-styles" id="age" type="number" placeholder="Enter the age"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td colspan="2">
+                    <textarea class="input-styles" style="resize: none;" name="address" id="address" cols="30" rows="20" placeholder="Enter the address"></textarea>
+                </td>
+                </tr>
+
+                <!-- payment-information -->
+                <tr>
+                    <th colspan="3" id="payment-information"> Payment Information</th>
+                </tr>
+
+                <tr>
+                    <td>Select the payment-information
+                        <br>type:
+                    </td>
+
+                    <td><input type="radio" id="card" name="payment-method">
+                    <label for="card">Card</label>
+                    </td>
+
+                    <td><input type="radio" id="cash" name="payment-method">
+                    <label for="cash">Cash</label>
+                    </td>
+                </tr>
+
+                <!-- card number -->
+                <tr>
+                    <td>Card Number</td>
+                    <td colspan="2"><input class="input-styles" type="number" id="card-number" placeholder="Enter the card number"></td>
+                </tr>
+
+                <tr>
+                    <td>Cvv Number</td>
+                    <td colspan="2"><input class="input-styles" type="number" id="cvv-number" placeholder="Enter the cvv number"></td>
+                </tr>
+        </table>
+
+        <button id="confirm" type="submit">CONFIRM </button>
+    </div>
+</right>
+</center>
+</body>
+</html>
